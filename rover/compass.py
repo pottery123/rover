@@ -2,6 +2,11 @@
 from collections import deque
 
 class Compass(object):
+    """
+    Provides directional assistance for objects
+
+    initial_direction: [string] initial direction is N E S or W 
+    """
     def __init__(self,initial_direction):
         self.valid_directions = ["N","E","S","W"]
         self.initial_direction = initial_direction
