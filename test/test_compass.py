@@ -1,15 +1,15 @@
-# import os
-# import sys
-import unittest
-#
-# sys.path.insert(0, os.path.abspath(os.path.join(os.getcwd(), 'rover')))
+# -*- coding: utf-8 -*-
 
-from .context import Rover
-from .context import Compass
+import unittest
+from rover import Compass
 
 class TestCompass(unittest.TestCase):
+    def test_compass_has_correct_initial_directions(self):
+        with self.assertRaises(ValueError):
+            Compass('R')
+
     def test_turn_right(self):
-        c = Compass("N")
+        c = Compass('N')
         c.turn_left()
         self.assertEqual('W', c.current_dir())
 
@@ -27,7 +27,3 @@ class TestCompass(unittest.TestCase):
         c = Compass("E")
         self.assertEqual('E', c.current_dir())
 
-    #
-    # def test_valid_location(self):
-    #     c = Compass("X")
-    #     self.assertRaises(ValueError, c.initial_direction)
