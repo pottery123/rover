@@ -32,11 +32,10 @@ class Compass(object):
             count += 1
             self.turn_left()
             if count >= 4:
-                raise Exception('Current direction not found')
+                Exception('Current direction not found')
 
     def validate_initial_dir(self):
         if type(self.initial_dir) is not str:
-             raise TypeError("Must be a str")
+             TypeError("Must be a str")
         elif self.initial_dir not in ["N","W","E","S"]:
-             raise ValueError("Must be str of N E S or W")
-
+              ValueError("Must be str of N E S or W")
