@@ -27,10 +27,8 @@ class TestCompass(unittest.TestCase):
         c = Compass("E")
         self.assertEqual('E', c.current_dir())
 
-<<<<<<< HEAD
+
 
     def test_valid_location(self):
          c = Compass("X")
          self.assertRaises(ValueError, c.initial_direction)
-=======
->>>>>>> 2e72e7567eefb2c2333cc749a9df13e93e9ef01a
