@@ -1,11 +1,11 @@
 #!usr/bin/emv python
-import compass
+
+from .compass import Compass
 
 class Rover(object):
     def __init__(self,initial_dir,cart=[0,0]):
         self.cart = cart
-        self.initial_dir = initial_dir
-        self.compass = compass.Compass(self.initial_dir)
+        self.compass = Compass(initial_dir)
 
     def move(self):
         if self.compass.current_dir()   == "N":
